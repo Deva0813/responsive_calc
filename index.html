@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive page calculator</title>
+</head>
+<body>
+    
+    <script>
+        function calc_w(){
+            var p_w =  parseInt(document.getElementById('p_width').value) ;
+            var e_w =  parseInt(document.getElementById('e_width').value);
+            document.getElementById('ans').innerHTML= (e_w/p_w)*100 ;
+        }
+
+        function calc_h(){
+            var p_h =  parseInt(document.getElementById('p_height').value) ;
+            var e_h =  parseInt(document.getElementById('e_height').value);
+            document.getElementById('ans').innerHTML= (e_h/p_h)*100 ;
+        }
+
+    </script>
+
+    <form action="" method="post">
+        <h1>RESPONSIVE PAGE CALCULATOR</h1>
+        <h3>
+            <hr>
+            Enter main page width &nbsp;: <input type="text" id="p_width"> <br>
+            Enter main page height : <input type="text" name="" id="p_height"> <br>
+            <hr>
+        </h3>
+        <h3>
+            <hr>
+            Enter element page width &nbsp;: <input type="text" id="e_width"> <br>
+            Enter element page height : <input type="text" name="" id="e_height"> <br>
+            <hr>
+        </h3>
+        <button type="button" onclick="calc_w()" id="w">Calc width</button>
+        <button type="button" onclick="calc_h()" id="h">Calc height</button>
+        <br><br>
+        <h1>Percentage: <br>
+            <span id="ans" ></span>
+            &nbsp;%
+        </h1>
+
+    </form>
+
+</body>
+</html>
